@@ -17,7 +17,7 @@ app.use(
 
 app.use(express.json());
 
-app.use("/api/clients", clientsRoutes);
-app.use("/api/games", gamesRoutes);
+app.use("https://gambling-o5s5.onrender.com/api/clients", clientsRoutes);
+app.use("https://gambling-o5s5.onrender.com/api/games", gamesRoutes);
 
 export default app;
