@@ -12,13 +12,13 @@ app.use(
             "https://gambling-o5s5.onrender.com",   // Backend en OnRender
         ],
       credentials: true, 
-      
+
     })
   );
 
 app.use(express.json());
 
-app.use("https://gambling-o5s5.onrender.com/api/clients", clientsRoutes);
-app.use("https://gambling-o5s5.onrender.com/api/games", gamesRoutes);
+app.use("/api/clients", clientsRoutes);
+app.use("/api/games", gamesRoutes);
 
 export default app;
