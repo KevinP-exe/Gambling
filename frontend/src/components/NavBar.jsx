@@ -1,5 +1,5 @@
 import React from "react"
-import "./Navbar.css";
+import "./NavBar.css";
 
 import img1 from "../imgs/casinologo.png"
 import img2 from "../imgs/casa.png"
