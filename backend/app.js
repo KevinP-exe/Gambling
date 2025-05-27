@@ -16,7 +16,6 @@ app.use(
   );
 
 app.use(express.json());
-app.use(cookieParser());
 
 app.use("/api/clients", clientsRoutes);
 app.use("/api/games", gamesRoutes);
