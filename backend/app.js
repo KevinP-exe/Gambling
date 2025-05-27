@@ -1,0 +1,24 @@
+import express from "express";
+import cors from "cors";
+import gamesRoutes from "./src/routes/gamesRoute.js"
+import clientsRoutes from "./src/routes/clientsRoute.js"
+
+const app = express();
+
+app.use(
+    cors({
+      origin: [
+            "https://proyecto-mern-2-b-eosin.vercel.app", // Frontend en Vercel
+            "https://proyectomern2b-wu9z.onrender.com",   // Backend en OnRender
+        ],
+      credentials: true, 
+    })
+  );
+
+app.use(express.json());
+app.use(cookieParser());
+
+app.use("/api/clients", clientsRoutes);
+app.use("/api/games", gamesRoutes);
+
+export default app;
