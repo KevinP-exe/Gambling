@@ -1,10 +1,10 @@
 import React from "react"
 import "./navbar.css";
 
-import img1 from "../imgs/logoZ.jpg"
-import img2 from "../imgs/products.png"
+import img1 from "../imgs/casinologo.png"
+import img2 from "../imgs/casa.png"
 import img3 from "../imgs/customers.png"
-import img4 from "../imgs/employees.png"
+import img4 from "../imgs/games.png"
 
 const Nav = () => {
     return (
@@ -15,7 +15,7 @@ const Nav = () => {
                 </div>
                 <ul>
                     <li>
-                        <a href="/">Productos
+                        <a href="/">Inicio
                         <img src={img2}/></a>
                     </li>
                     <li>
@@ -23,7 +23,7 @@ const Nav = () => {
                         <img src={img3}/></a>
                     </li>
                     <li>
-                        <a href="/Employees">Empleados
+                        <a href="/Games">Games
                         <img src={img4}/></a>
                     </li>
                 </ul>
