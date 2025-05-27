@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import RegisterGame from "../components/games/CardGame";
+import RegisterGame from "../components/games/RegisterGames";
 import ListGames from "../components/games/ListGames";
 import useDataGames from "../components/games/hooks/useDataGames";
 
