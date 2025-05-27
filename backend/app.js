@@ -9,7 +9,7 @@ app.use(
     cors({
       origin: [
             "https://proyecto-mern-2-b-eosin.vercel.app", // Frontend en Vercel
-            "https://proyectomern2b-wu9z.onrender.com",   // Backend en OnRender
+            "https://gambling-o5s5.onrender.com",   // Backend en OnRender
         ],
       credentials: true, 
     })
