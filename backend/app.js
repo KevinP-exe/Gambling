@@ -12,6 +12,7 @@ app.use(
             "https://gambling-o5s5.onrender.com",   // Backend en OnRender
         ],
       credentials: true, 
+      
     })
   );
 
