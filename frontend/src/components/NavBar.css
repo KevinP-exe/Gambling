@@ -1,0 +1,44 @@
+nav {
+    background-color: #00275b;
+    color: #fff;
+}
+
+#bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo {
+    width: 100px;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    padding: 10px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color:#fff;
+    font-size: 20px;
+    font-weight: 350;
+}
+
+li a {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+li img {
+    width: 30px;
+}
