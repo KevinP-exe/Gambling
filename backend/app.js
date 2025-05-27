@@ -8,7 +8,7 @@ const app = express();
 app.use(
     cors({
       origin: [
-            "https://gambling-tavs-8j3jymwvr-kevshitos-projects.vercel.app", // Frontend en Vercel
+            "https://gambling-tavs-5xdchuwoj-kevshitos-projects.vercel.app", // Frontend en Vercel
             "https://gambling-o5s5.onrender.com",   // Backend en OnRender
         ],
       credentials: true, 
