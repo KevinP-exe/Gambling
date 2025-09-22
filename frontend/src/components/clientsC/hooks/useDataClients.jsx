@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 
 const useDataClients = () => {
-  const ApiClients = "gambling-production.up.railway.app/api/clients"; 
+  const ApiClients = "https://gambling-production.up.railway.app/api/clients";
 
   const [activeTab, setActiveTab] = useState("list");
   const [id, setId] = useState("");
@@ -62,18 +62,41 @@ const useDataClients = () => {
   };
 
   const fetchData = async () => {
-    setLoading(true);
+  setLoading(true);
+  try {
+    const response = await fetch(ApiClients, {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error("Error al obtener los clientes");
+    }
+
+    // Lee la respuesta como texto
+    const text = await response.text();
+    console.log("Texto recibido:", text);
+
+    // Intenta parsear el texto solo si es JSON
     try {
-      const response = await fetch(ApiClients);
-      if (!response.ok) throw new Error("Error al obtener los clientes");
-      const data = await response.json();
+      const data = JSON.parse(text);
+      console.log("Mis clientes:", data);
       setClients(data);
     } catch (error) {
-      console.error("Error fetching data:", error);
-    } finally {
-      setLoading(false);
+      console.error("Error parsing JSON:", error);
+      toast.error("Respuesta no es JSON");
     }
-  };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    toast.error(error.message);
+  } finally {
+    setLoading(false);
+  }
+};
 
   useEffect(() => {
     fetchData();

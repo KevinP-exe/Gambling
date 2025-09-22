@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 
 const useDataGames = () => {
-  const ApiGames = "gambling-production.up.railway.app/api/games";
+  const ApiGames = "https://gambling-production.up.railway.app/api/games";
 
   const [activeTab, setActiveTab] = useState("list");
   const [id, setId] = useState("");
