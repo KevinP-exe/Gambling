@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 
 const useDataClients = () => {
-  const ApiClients = "https://gambling-o5s5.onrender.com/api/clients"; 
+  const ApiClients = "gambling-production.up.railway.app"; 
 
   const [activeTab, setActiveTab] = useState("list");
   const [id, setId] = useState("");
